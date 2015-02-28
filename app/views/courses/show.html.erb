@@ -21,8 +21,8 @@
 
 <h1>Course Content</h1>
 <% if @course.course_content.length > 0 %>
-     <% @content.each do |cc| %>
-        <p><%= cc.body %></p>
+     <% @course.course_content.each do |cc| %>
+        <p><%= cc.name %></p>
     <% end %>
 <% else %>
     <p>There is no content.</p>
