@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228150330) do
+ActiveRecord::Schema.define(version: 20150228172223) do
+
+  create_table "assets", force: true do |t|
+    t.string   "type"
+    t.datetime "posted"
+    t.string   "description"
+    t.string   "tags"
+    t.integer  "rating"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "courses", force: true do |t|
     t.string   "name"
@@ -22,6 +32,15 @@ ActiveRecord::Schema.define(version: 20150228150330) do
   end
 
   create_table "dashboards", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "documents", force: true do |t|
+    t.string   "name"
+    t.string   "tags"
+    t.string   "course"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -43,5 +62,10 @@ ActiveRecord::Schema.define(version: 20150228150330) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "videos", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

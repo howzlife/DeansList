@@ -1,15 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  type: 
-  posted: 
+  name: MyString
+  tags: MyString
+  course: MyString
   description: MyString
-  tags: 
-  rating: 1
 
 two:
-  type: 
-  posted: 
+  name: MyString
+  tags: MyString
+  course: MyString
   description: MyString
-  tags: 
-  rating: 1
