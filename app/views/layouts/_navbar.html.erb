@@ -25,7 +25,10 @@
          
             <% if defined? @courses %>
               <% @courses.each do |course|%>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Course: <%= course.name %></a></li>
+                <li role="presentation">
+                  <!--<a role="menuitem" tabindex="-1" href="#">Course: <%= course.name %></a>-->
+                  <%= link_to course.name, course %>
+                </li>
               <% end %>
             <%else%>
              <li role="presentation">You have no courses<a role="menuitem" tabindex="-1" href="/courses/new">Add New Courses</a></li>
