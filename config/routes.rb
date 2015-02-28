@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :assets
+
   resources :documents
 
   resources :courses

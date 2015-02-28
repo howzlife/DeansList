@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228172223) do
+ActiveRecord::Schema.define(version: 20150228182534) do
 
   create_table "assets", force: true do |t|
-    t.string   "type"
-    t.datetime "posted"
-    t.string   "description"
-    t.string   "tags"
-    t.integer  "rating"
+    t.integer  "course_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "uploaded_file_file_name"
+    t.string   "uploaded_file_content_type"
+    t.integer  "uploaded_file_file_size"
+    t.datetime "uploaded_file_updated_at"
   end
 
   create_table "courses", force: true do |t|

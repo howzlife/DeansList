@@ -2,18 +2,16 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @course.name %>
+  <h1><%= @course.name %></h1>
 </p>
 
 <p>
   <strong>Code:</strong>
-  <%= @course.code %>
+  <h3><%= @course.code %></h3>
 </p>
 
 <p>
   <strong>Semester:</strong>
-  <%= @course.semester %>
+  <h3><%= @course.semester %></h3>
 </p>
 
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>

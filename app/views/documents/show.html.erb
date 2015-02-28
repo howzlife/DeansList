@@ -19,6 +19,10 @@
   <strong>Description:</strong>
   <%= @document.description %>
 </p>
+<p>
+  <strong>Attached Document</strong>
+  <%= link_to @document.document.file_name, @document.document.uploaded_file.url %>
+</p>
 
 <%= link_to 'Edit', edit_document_path(@document) %> |
 <%= link_to 'Back', documents_path %>
