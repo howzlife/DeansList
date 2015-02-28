@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: 'users/sessions',  registrations: 'users/registrations', confirmations: 'users/confirmations' }
+  resources :courses
+
+  devise_for :users
   resources :dashboard
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
 
   unauthenticated :user do
     devise_scope :user do 
-      get "/" => "users/sessions#new"
+      get "/" => "devise/sessions#new"
     end
   end
 
