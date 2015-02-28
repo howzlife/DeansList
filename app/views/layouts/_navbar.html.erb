@@ -23,7 +23,7 @@
           <ul class="dropdown-menu" role="menu">
           
          
-            <% if defined? @courses %>
+            <% if @courses.length > 0 %>
               <% @courses.each do |course|%>
                 <li role="presentation">
                   <!--<a role="menuitem" tabindex="-1" href="#">Course: <%= course.name %></a>-->

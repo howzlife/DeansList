@@ -9,7 +9,7 @@ class CoursesController < ApplicationController
   end
 
   def show
-    respond_with(@course)
+    @course_content = CourseContent.new
   end
 
   def new

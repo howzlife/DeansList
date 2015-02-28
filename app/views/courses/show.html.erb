@@ -9,3 +9,21 @@
   <strong>Code:</strong>
   <h3><%= @course.code %></h3>
 </p>
+
+<h1>New Post</h1>
+<%= form_for @course_content do |f| %>
+    <%= f.hidden_field :course_id, value: @course.id %>
+
+    Name: <%= f.text_field :name %>
+
+    <%= f.submit %>
+<% end %>
+
+<h1>Course Content</h1>
+<% if @course.course_content.length > 0 %>
+     <% @content.each do |cc| %>
+        <p><%= cc.body %></p>
+    <% end %>
+<% else %>
+    <p>There is no content.</p>
+<% end %>
