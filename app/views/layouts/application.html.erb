@@ -14,8 +14,18 @@
 	<% if alert %>
   	<p class="alert alert-danger"><%= alert %></p>
 	<% end %>
-
-<%= yield %>
+<div class="container">
+	<div id="wrapper">
+	  <div class="row">
+	  	<div class="span2" id="sidebar-wrapper">
+	  		<%= render "layouts/sidebar" %>
+	  	</div>
+	  	<div class="span10 main">
+	    <%= yield %>
+	    </div>
+	  </div>
+	</div>
+</div>
 
 </body>
 </html>
