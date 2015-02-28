@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @asset.type %>
+</p>
+
+<p>
+  <strong>Posted:</strong>
+  <%= @asset.posted %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @asset.description %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @asset.tags %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @asset.rating %>
+</p>
+
+<%= link_to 'Edit', edit_asset_path(@asset) %> |
+<%= link_to 'Back', assets_path %>

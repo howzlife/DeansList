@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  posted: 
+  description: MyString
+  tags: 
+  rating: 1
+
+two:
+  type: 
+  posted: 
+  description: MyString
+  tags: 
+  rating: 1
