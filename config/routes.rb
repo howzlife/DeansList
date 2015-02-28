@@ -1,9 +1,20 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { sessions: 'users/sessions',  registrations: 'users/registrations', confirmations: 'users/confirmations' }
+  resources :dashboard
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+
+  authenticated :user do
+    root 'dashboard#index', as: :authenticated_root
+  end
+
+  unauthenticated :user do
+    devise_scope :user do 
+      get "/" => "users/sessions#new"
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
