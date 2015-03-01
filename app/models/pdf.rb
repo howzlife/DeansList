@@ -1,8 +1,6 @@
+class Pdf < ActiveRecord::Base
+	belongs_to :course_content
 
-class CourseContent < ActiveRecord::Base
-    belongs_to :course
-
-    #set up "uploaded_file" field as attached_file (using Paperclip) 
 	has_attached_file :uploaded_file
   
 	validates_attachment_size :uploaded_file, :less_than => 10.megabytes   
@@ -12,5 +10,4 @@ class CourseContent < ActiveRecord::Base
 	def file_name 
     	uploaded_file_file_name 
 	end
-
 end

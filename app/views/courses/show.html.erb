@@ -11,11 +11,12 @@
 </p>
 
 <h1>New Post</h1>
-<%= form_for @course_content do |f| %>
+<%= form_for @course_content, :html => {:multipart => true} do |f| %>
     <%= f.hidden_field :course_id, value: @course.id %>
 
     Comment: <%= f.text_area :body %>
-
+    <%= f.label :uploaded_file, "Attach" %><br /> 
+    <%= f.file_field :uploaded_file %> 
     <%= f.submit %>
 <% end %>
 
@@ -24,7 +25,7 @@
      <% @course.course_content.each do |cc| %>
         <p><%= cc.body %></p>
         <p><%= embed_doc(cc.body)%> </p>
-
+        <p><%= link_to cc.uploaded_file_file_name, cc.uploaded_file.url %></p>
     <% end %>
 <% else %>
     <p>There is no content.</p>

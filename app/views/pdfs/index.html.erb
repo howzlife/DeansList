@@ -1,0 +1,15 @@
+<h1>Uploaded PDF's</h1>
+<table> 
+  <tr> 
+    <th>Uploaded Files</th> 
+  </tr> 
+  <% for pdf in @pdfs %> 
+    <tr> 
+      <td><%= link_to pdf.uploaded_file_file_name, pdf.uploaded_file.url %></td> 
+      <td><%= link_to "Show", pdf %></td> 
+      <td><%= link_to "Edit", edit_pdf_path(pdf) %></td> 
+      <td><%= link_to "Destroy", pdf, :confirm => 'Are you sure?', :method => :delete %></td> 
+    </tr> 
+  <% end %> 
+</table> 
+<p><%= link_to "New Asset", new_pdf_path %></p>
