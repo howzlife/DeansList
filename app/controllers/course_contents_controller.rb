@@ -10,6 +10,6 @@ class CourseContentsController < ApplicationController
 
     private
         def course_content_params
-            params.require(:course_content).permit(:course_id, :name, :description, :body)
+            params.require(:course_content).permit(:course_id, :name, :description, :body, :uploaded_file)
         end
 end

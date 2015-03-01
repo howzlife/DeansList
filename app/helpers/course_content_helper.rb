@@ -10,6 +10,11 @@ module CourseContentHelper
 		end
 	end
 
+	def link_attachment(uploaded_file)
+		return "" if uploaded_file.nil?
+		content_tag(:p, link_to(cc.uploaded_file_file_name, cc.uploaded_file.url))
+	end
+
     def parse_for_url(body)
 		urls = URI.extract(body)
 		if urls.length > 0 
