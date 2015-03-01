@@ -14,7 +14,7 @@
 <%= form_for @course_content do |f| %>
     <%= f.hidden_field :course_id, value: @course.id %>
 
-    Name: <%= f.text_field :name %>
+    Comment: <%= f.text_area :body %>
 
     <%= f.submit %>
 <% end %>
@@ -22,7 +22,9 @@
 <h1>Course Content</h1>
 <% if @course.course_content.length > 0 %>
      <% @course.course_content.each do |cc| %>
-        <p><%= cc.name %></p>
+        <p><%= cc.body %></p>
+        <p><%= embed_doc(cc.body)%> </p>
+
     <% end %>
 <% else %>
     <p>There is no content.</p>
