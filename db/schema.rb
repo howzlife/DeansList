@@ -13,16 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150301172547) do
 
-  create_table "assets", force: true do |t|
-    t.integer  "course_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "uploaded_file_file_name"
-    t.string   "uploaded_file_content_type"
-    t.integer  "uploaded_file_file_size"
-    t.datetime "uploaded_file_updated_at"
-  end
-
   create_table "course_contents", force: true do |t|
     t.string   "name"
     t.text     "description"
@@ -41,26 +31,12 @@ ActiveRecord::Schema.define(version: 20150301172547) do
   create_table "courses", force: true do |t|
     t.string   "name"
     t.string   "code"
-    t.string   "semester"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "dashboards", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "documents", force: true do |t|
-    t.string   "name"
-    t.string   "tags"
-    t.string   "course"
-    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "pdfs", force: true do |t|
+    t.integer  "course_contents_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "uploaded_file_file_name"
@@ -69,6 +45,8 @@ ActiveRecord::Schema.define(version: 20150301172547) do
     t.datetime "uploaded_file_updated_at"
     t.integer  "course_content_id"
   end
+
+  add_index "pdfs", ["course_contents_id"], name: "index_pdfs_on_course_contents_id"
 
   create_table "posts", force: true do |t|
     t.text     "body"
@@ -93,10 +71,5 @@ ActiveRecord::Schema.define(version: 20150301172547) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-
-  create_table "videos", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
 end
