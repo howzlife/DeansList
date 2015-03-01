@@ -1,0 +1,132 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	background-color: #b3bebd;
+}
+
+.container{
+	background: url("landingBg.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.headerDashboard{
+	background-color: white;
+	max-height: 15%;
+}
+
+.titleVideo{
+	margin-left: 10px;
+}
+
+.videoContainer{
+	padding: 10px 0px;
+	width: 800px;
+	background-color: #fff;
+	margin: 10px auto;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.videoText{
+	width: 60%;
+	margin-left: 150px;
+	text-align: justify;
+}
+
+.videoContainer iframe{
+	margin-left: 50px;
+}
+
+.wrapperDashboard{
+	margin: 0px 0px;
+	background-color: #b3bebd;
+}
+
+.video{
+	margin: 10px 100px;
+}
+
+.titleWhite{
+	padding: 10px;
+}
+
+.titleWhite img{
+	height: 80%;
+}
+
+.wrapper{	
+	width: 100%;
+	height: 80%;
+	margin: 0px auto;
+}
+
+.header{
+	height: 20%;
+}
+
+.header h1{
+	color: #fff;
+	font-size: 60px;
+}
+
+.row{
+	margin: 0px auto;
+	padding: 0px;
+	max-width: 100%;
+}
+
+.columns{
+	margin: 0px;
+	padding: 0px;
+}
+
+.quote {
+	margin: 40px 0px 0px 50px;
+}
+
+.loginForm{
+	margin: 20px 20px;
+}
+
+.loginForm h3{
+	color: #fff;
+}
+
+.headerButton{	
+	margin-left: 10px;
+}
+
+.headerButton a{
+	padding: 5px 20px;
+	background-color: rgb(110,189,178);
+	color: #fff;
+	border-radius:25px;
+}
+
+.registerButton{
+	margin: 0px 600px;
+}
+
+.registerButton a{
+	margin-bottom: 20px;
+	padding: 10px 30px;
+	border-radius:25px;
+	background-color: #dcb626;
+	color: #fff;
+}
+
+.rememberMe{
+	margin-left: 18px;
+	color: #fff;
+	font-size: 20px;
+}
+
+
+

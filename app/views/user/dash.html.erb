@@ -1,5 +1,52 @@
-<h2>Your Class Activity Feed</h2>
+<h1>My Dashboard</h1>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pt8VYOfr8To" frameborder="0" allowfullscreen></iframe>
+<div class="feed">
+    <article>
+        <h1>I found this video educational</h1>
+        <span class="coursecode">MUS2122</span>
+        <span class="author">by William Duvall,</span>
+        <span class="date">An hour ago</span>
 
+        <div class="content">
+            <iframe src="https://www.youtube.com/embed/OM4mVGJkp6A" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </article>
 
+    <article class="related">
+        <h1>We thought you might like:</h1>
+        <div class="content">
+            <%= image_tag "http://www.placecage.com/103/90" %>
+            <%= image_tag "http://www.placecage.com/103/91" %>
+            <%= image_tag "http://www.placecage.com/103/89" %>
+            <%= image_tag "http://www.placecage.com/104/91" %>
+        </div>
+    </article>
+
+    <article>
+        <h1>Mnemonics for modes?</h1>
+        <span class="coursecode">MUS2101</span>
+        <span class="author">by I. M. Beethoven,</span>
+        <span class="date">Yesterday</span>
+
+        <div class="content">
+            <p>Dose anybody have any good mnemonics for modes? I cant for the life of me remember witch order they go in lol!!</p>
+        </div>
+
+        <div class="comments">
+            Comments:
+            <div><span class="commenter">M. Naught Beethoven</span>Try this: Don't Particularly Like Modes A Lot (Ionian, Dorian, Phygrian, Lydian, Myxolidian, Aolian, Locrian).</div>
+            <div><span class="commenter">I. M. Beethoven</span>OMG Thanx soo Much!!!</div>
+            <div><input type="text" class="form-control" placeholder="Write a new comment" /></div>
+        </div>
+    </article>
+    <article>
+        <h1>Anyone in Fillion's saxophone class - I heard he gives extra points if you can pull this off:</h1>
+        <span class="coursecode">SAX101</span>
+        <span class="author">by Jeff Coffin,</span>
+        <span class="date">Friday</span>
+
+        <div class="content">
+            <iframe src="https://www.youtube.com/embed/gLnjWe4V1hA" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </article>
+</div>

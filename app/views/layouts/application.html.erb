@@ -2,33 +2,30 @@
 <html>
 <head>
   <title>DeansList</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200|Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <%# Render the header %>
+    <%= render "layouts/navbar" %>
 
-	<%= render "layouts/navbar" %>
+    <%# Render any flash messages %>
 	<% if notice %>
-  	<p class="alert alert-success"><%= notice %></p>
+  	     <p class="alert alert-success"><%= notice %></p>
 	<% end %>
-	<% if alert %>
-  	<p class="alert alert-danger"><%= alert %></p>
+    <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
 	<% end %>
-<div class="container">
-	<div id="wrapper">
-	  <div class="row">
-	  	<!--	<div class="span2" id="sidebar-wrapper">
-	  		<%render "layouts/sidebar" %>
-	  	</div>
-	  	-->
-	  	<div class="span10 main">
-	    <%= yield %>
-	    </div>
-	  </div>
-	</div>
-</div>
 
-
+    <%# Render the page body %>
+    <%= yield %>
 </body>
 </html>
